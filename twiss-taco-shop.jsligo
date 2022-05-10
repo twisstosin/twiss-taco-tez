@@ -10,3 +10,7 @@ let init_storage : taco_shop_storage = Map.literal (list([
 let main = ([taco_kind_index, taco_shop_storage] : [unit, taco_shop_storage]) : return_ => {
   return [(list([]) as list <operation>), taco_shop_storage]
 };
+
+let buy_taco = ([taco_kind_index, taco_shop_storage] : [nat, taco_shop_storage]) : return_ => {
+  return [(list([]) as list <operation>), taco_shop_storage]
+};
