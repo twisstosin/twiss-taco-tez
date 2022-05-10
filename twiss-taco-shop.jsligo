@@ -1,0 +1,6 @@
+
+let main = ([parameter, contractStorage] : [int, int]) : [list <operation>, int] => {
+    return [
+        (list([]) as list <operation>), contractStorage + parameter
+]
+};
