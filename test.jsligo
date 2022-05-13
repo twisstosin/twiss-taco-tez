@@ -18,7 +18,7 @@ let _test = (_: unit): unit => {
   let init_storage = Map.literal (list([
       [1 as nat, { current_stock : 50 as nat, max_price : 50 as tez }],
       [2 as nat, { current_stock : 20 as nat, max_price : 75 as tez }] ])) ;
-  let [twiss_taco_shop_ta, _code, _size] = Test.originate (buy_taco, init_storage, 0 as tez) ;
+  let [twiss_taco_shop_ta, _code, _size] = Test.originate (main, init_storage, 0 as tez) ;
   /* Convert typed_address to contract */
   let twiss_taco_shop_ctr = Test.to_contract (twiss_taco_shop_ta);
   /* Convert contract to address */

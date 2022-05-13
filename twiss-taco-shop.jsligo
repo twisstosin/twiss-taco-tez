@@ -7,7 +7,7 @@ let init_storage : taco_shop_storage = Map.literal (list([
   [2 as nat, { current_stock : 20 as nat, max_price : 75 as tez }]
 ]));
 
-let buy_taco = ([taco_kind_index, taco_shop_storage] : [nat, taco_shop_storage]) : return_ => {
+let main = ([taco_kind_index, taco_shop_storage] : [nat, taco_shop_storage]) : return_ => {
   /* Retrieve the taco_kind from the contracts storage or fail */
   let taco_kind : taco_supply =
     match (Map.find_opt (taco_kind_index, taco_shop_storage), {
